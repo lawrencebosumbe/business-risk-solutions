@@ -1,0 +1,81 @@
+html { overflow-y: scroll; }
+.panel {
+    margin-top: 75px;
+    left: 0;
+    border: 1px solid #ddd;
+    width: 100%;
+    border-radius: 5px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -o-border-radius: 10px;
+    -ms-border-radius: 10px;
+    height: 1400px !important;
+    -moz-box-shadow: 1px 1px 1px 3px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 1px 1px 1px 3px rgba(0, 0, 0, 0.3);
+    box-shadow: 1px 1px 1px 3px rgba(0, 0, 0, 0.3);
+    margin-bottom: 175px;
+}
+
+.panel .panel-heading{
+    background-color: #fff;
+    border-radius: 5px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -o-border-radius: 10px;
+    -ms-border-radius: 10px;
+    
+}
+
+.panel .panel-title{
+    position: relative;
+    top: 25px;
+    font-weight: bold;
+}
+
+.panel .panel-body{
+    height: auto;
+    width: 100%;
+    margin-left: 0;
+    
+}
+
+.panel .panel-body embed{
+    height: 1200px !important;
+}
+
+
+.panel .panel-footer{
+    background-color: #fff;
+    margin-bottom: 145px;
+}
+
+.panel .panel-footer p{
+    margin: 0 15px;
+}
+
+.panel .panel-footer button{
+    margin-left: 25px;
+    background-color: #069;
+    color: #fff;
+}
+
+.panel .panel-footer button:hover{
+    color: #fff;
+}
+
+.panel .panel-footer input[type="checkbox"]{
+    margin-left: 15px;
+}
+
+.panel .panel-heading p{
+    margin-top: 15px;
+    font-size: 1.25rem;
+    margin-bottom: 45px;
+}
+
+.copy-right{
+    margin-top: 175px;
+    margin-bottom: 125px;
+    display: block;
+    z-index: 99;
+}

@@ -1,0 +1,254 @@
+/*
+-----------------------------------------
+    MAIN STYLES
+-----------------------------------------
+*/
+
+.navbar-bg-dark {
+  background: #364B56 !important;
+}
+.navbar-bg-silver {
+  background: #d2d6de !important;
+  border-bottom: 3px solid #556B78 !important;
+}
+	
+.brs-img{
+  position: relative;
+  top: -15px;
+  left: -13px;
+  min-width: 100%;
+  min-height: 100px;
+}
+
+.my-organization{
+	margin-top: 45px;
+}
+
+[class*='nav-item']  > a > .iso-icon{
+      width: 13%;
+} 
+
+.navbar{
+  position: fixed;
+  max-height: 65px;
+  width: 100%;
+  background: #364B56 !important;
+  z-index: 1;
+}
+
+.navbar .navbar-nav-1{
+  margin-left: 25%;
+  margin-bottom: 15px;
+  display: inline-block;
+}
+
+.navbar .btn-primary{
+  background: #556B78 !important;
+  border: 1px solid #556B78 !important;
+  height: 100%;
+}
+    .btn {
+    margin-top: 15px;
+    padding: 0.475rem 0.75rem;
+  }
+  
+    .btn-primary {
+    color: #fff;
+    background-color: #364B56;
+    border-color: #556B78;
+  }
+  
+  .btn-primary:hover {
+    color: #fff;
+    background-color: #556B78;
+    border-color: #556B78;
+  }
+  
+  .document-top-cards{
+        color: #000;
+        text-decoration: none;
+    }
+      
+    .document-top-cards:hover{
+        color: #000;
+        text-decoration: none;
+    }
+    
+    .document-top-cards .info-box{
+        color: #fff;
+        background: #556B78;
+    }
+    
+  .small-box{
+        margin-top: 24px !important;
+     }
+   
+    .small-box h3{
+        font-size: 24px !important;
+        color: #fff;
+     }
+     
+     .small-box span{
+        font-size: 42px;
+        color: #fff;
+        margin-left: 35%;
+     } 
+     
+     .small-box .small-box-footer{
+        color: #fff !important;     
+     }
+
+     /*
+      -------------------------------------
+        SIDEBAR
+      -------------------------------------
+     */
+     .sidebar{
+      margin-top: 75px;
+        min-width: 100%;
+     }
+
+     .wrapper .brand-link {
+        height: calc(4rem + 1px) !important;
+        background-color: #556B78 !important;
+        border-bottom: 1px solid #556B78 !important;
+      }
+
+      .wrapper .brand-link ul li{
+        display: inline-block;
+        list-style: none;      
+      }
+
+      .wrapper .brand-link li a i{
+        position: relative;
+        top: 5px;
+        color: #fff;
+        font-size: 28px !important;
+        margin-right: 5px;
+      }
+
+      .wrapper .brand-link li a img{
+        width: 35px;
+        margin-right: 10px;                 
+      }
+
+      .wrapper .brand-link ul {
+        margin-right: 5px;
+        color: #fff;
+        font-size: 15px; 
+      }
+
+      .wrapper .brand-link ul i{
+        font-size: 15px;
+      }
+
+      .elevation-2{
+        width: 90%;
+        margin-left: 5%;
+        border-radius: 15px;
+      }
+
+      .brand-link-logo {
+        display: block;
+        height: calc(5.5rem + 1px) !important;
+        margin-top: 15px;
+        margin-bottom: 35px;
+        font-size: 1.25rem;
+        line-height: 1.5;
+        padding: 0.8125rem 0.5rem;
+        transition: width 0.3s ease-in-out;
+        white-space: nowrap;
+      }
+
+      .brand-link-logo ul li{
+        display: inline-block;
+        list-style: none;
+      }
+
+      .brand-link-logo img{
+        width: 125px;
+        margin-top: -5px;
+        margin-left: 25px;
+      }
+
+      .main-sidebar{
+        position: relative;
+        z-index: 3;
+        left: -5% !important;
+        overflow: none !important;
+      }
+
+      
+     .main-sidebar .sidebar-logo{
+        margin-top: 45px;
+        height: 125px !important;
+     }
+
+     .main-sidebar .sidebar-logo img{
+        height: 100%;
+        border-radius: 5px;
+        border: 1px Solid #556B78;
+     }
+
+     .main-sidebar .upload_logo{
+        margin-top 15px;
+        height: 125px;
+        width: 115%;
+        margin-bottom: 15px;
+     }
+
+      .workspace-contact {
+        height: 425px;
+        width: 115%;
+        margin-bottom: 15px;
+      }
+
+      .workspace-contact a{
+        color: #007bff !important;
+        font-size: 13px;
+      }
+
+       .workspace-contact label{
+        margin-top: 15px;
+      }
+
+      .workspace-contact img{
+        width: 65px;
+        height: 65px;
+        border-radius: 50%;
+        border: 1px Solid #ccc;
+      }
+
+      .workspace-contact p{
+        margin-top: 5px;
+      }
+
+      .workspace-contact .send-message{
+        position: relative;
+        top: -15px;
+      }
+
+      .workspace-contact .checklist p{
+        font-size: 12px;
+      }
+
+      .navbar-nav .navbarDropdown{
+        color: #fff;
+      }
+
+      .stats{
+        margin-top: -25px !important;
+      }
+
+      /*
+      -------------------------------------
+        FOOTER
+      -------------------------------------
+     */
+      
+      footer{
+        position: fixed;
+        width: 100%; 
+        bottom: 0;
+        z-index: 99;      
+      }

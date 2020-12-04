@@ -1,0 +1,1 @@
+https://software.intel.com/android/articles/installation-instructions-for-intel-hardware-accelerated-execution-manager-windows

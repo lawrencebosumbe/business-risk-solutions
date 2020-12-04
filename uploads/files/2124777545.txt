@@ -1,0 +1,5 @@
+DISCLAIMER
+----------
+
+This text serves as disclaimer for testing purposes. And will therefore help
+to upload file into database.

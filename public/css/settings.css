@@ -1,0 +1,368 @@
+
+/*
+  list - grid
+--------------------------------------------
+*/
+.view-group {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+.thumbnail
+{
+    margin-bottom: 30px;
+    padding: 0px;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+}
+
+.item.list-group-item
+{
+    float: none;
+    width: 100%;
+    background-color: #fff;
+    margin-bottom: 30px;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding: 0 1rem;
+    border: 0;
+}
+.item.list-group-item .img-event {
+    float: left;
+    width: 30%;
+    margin-bottom: 15px;
+    padding: 15px;
+}
+
+.item.list-group-item .list-group-image
+{
+    margin-right: 10px;
+}
+.item.list-group-item .thumbnail
+{
+    margin-bottom: 0px;
+    display: inline-block;
+}
+.item.list-group-item .caption
+{
+    float: left;
+    width: 70%;
+    margin: 0;
+}
+
+.thumbnail{
+    width: 100% !important;
+}
+.item.list-group-item:before, .item.list-group-item:after
+{
+    display: table;
+    content: " ";
+}
+
+.item.list-group-item:after
+{
+    clear: both;
+}
+
+.caption h4{
+  font-weight: bold;
+}
+
+.btn {
+     margin-top: 15px;
+     padding: 0.475rem 0.75rem;
+  }
+  
+  .btn-primary {
+    color: #fff;
+    background-color: #364B56;
+    border-color: #556B78;
+  }
+  
+  .btn-primary:hover {
+    color: #fff;
+    background-color: #556B78;
+   border-color: #556B78;
+  }
+     
+  .content-header{
+    margin-top: 85px;
+  }
+  
+  .modal{
+    z-index: 9999;
+  }
+  
+  .post-user-img{
+    margin-top: 0;
+    margin-left: 0;
+  }
+    
+  .post-user-img li{
+    display: inline-block;
+  }
+    
+  .post-user-img li img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+  
+   /*
+    ------------------------------------
+        TAB NAV MENU
+    ------------------------------------
+    */
+    
+  .modal-header{
+    min-height: 85px;
+  }
+  
+  .nav-pill-header{
+    position: relative;
+    top: -30px;
+    left: 15px;
+    font-size: 20px;
+  }
+    
+  .nav-pill-header li{
+    width: 50%;
+  }
+  
+  .nav-pill-header .nav-pills .nav-link{
+    color: #000;
+   /*background: transparent;*/
+    border-radius: 0;
+    padding: 0;
+    text-align: center;
+  }
+    
+  .nav-pill-header .nav-pills .nav-link:first-child{
+    margin-right: 25px;
+  }
+  
+  .nav-pill-header .nav-pills .active{
+    border-bottom: 2px solid #007bff;
+  }
+
+  .card-body .nav-pills {
+    margin-left: 35%;
+  }
+
+  .card .task{
+    margin-left: 15px;
+    padding: 10px;
+    font-size: 18px;
+  }
+
+  /*
+  ------------------------------------
+        TOP NAVBAR
+  ------------------------------------
+  */
+
+    section #task-tab{
+      margin-bottom: 25px;
+      margin-left: 0 !important;
+    }
+
+    section .nav-pills li a{
+      background-color: #556B78;
+      color: #fff !important;
+      margin-left: 0;
+    }
+
+    section .nav-pills li .active{
+      background-color: #364B56 !important;
+    }
+
+    .nav-sidebar li .nav-link{
+      background-color: #556B78 !important;
+    }
+
+    .project-name{
+      margin: 15px;
+      color: #777;
+      font-size: 24px;
+    }
+
+    .task-card{
+    margin-top: 25px;
+    margin-left: -5px;
+    height: 45px;
+    padding: 10px 15px;
+    font-size: 18px;
+  }
+
+  .task-user-img img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-top: -10px;
+    margin-left: 45px;
+  }
+
+  .task-treeview > a{
+    background: #007bff !important;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    box-sizing: border-box;
+    margin-bottom: -10px;
+  }
+
+  .discussion-card{
+    margin-top: 25px !important;
+  }
+
+  article{
+    margin-bottom: -25px;
+    font-size: 12px !important;
+  }
+
+  section .card{
+    margin-bottom: -25px;
+  }
+
+  /*
+  ------------------------------------
+        SUB-TOP HEADING
+  ------------------------------------
+  */
+
+  .card .card-header-sub-top li{
+    margin-right: 10px;
+  }
+
+  .card .card-header-sub-top{
+    color: #fff;
+    background-color: #556B78;
+  }
+
+
+  .card .card-header-sub-top i{
+    color: #fff;    
+  }
+
+/*
+  .card .card-header-sub-top .nav-link{
+    color: #fff;
+    background-color: #567E95;
+  }
+  */
+  .card .card-header-sub-top .nav-link:hover{
+    color: #fff;
+  }
+
+  .card .card-header-sub-top li:nth-child(1) .nav-link{
+    color: #fff;
+    background-color: #567E95;
+  }
+
+  .card .card-header-sub-top li:nth-child(2) .nav-link{
+    color: #fff;
+    background-color: #567E95;
+  }
+
+  .card .card-header-sub-top li:nth-child(3) .nav-link{
+    color: #fff;
+    background-color: #567E95;
+    width: 25px;
+  }
+
+  .card .card-header-sub-top li:nth-child(3) .fa-ellipsis-v{
+    margin-left: 10px;
+  }
+
+  .card .card-header-sub-top li:nth-child(4) .nav-link{
+    color: #fff;
+    background-color: #567E95;
+  }
+
+  .card .card-header-sub-top li:nth-child(5) .nav-link{
+    color: #fff;
+    background-color: #567E95;
+  }
+
+  .card .card-header-sub-bottom{
+    background-color: #fff;
+    color: #556B78;
+  }
+
+
+  /*
+  ------------------------------------
+        NOTES
+  ------------------------------------
+  */
+
+  .notes{
+    font-size: 16px;
+  }
+
+  .notes a{
+    font-size: 16px;
+  }
+
+  .notes th{
+    font-size: 16px;
+  }
+
+  .notes a i{
+    color: gray;
+    font-size: 20px;
+  }
+
+  /*
+    ------------------------------------
+        DISCUSSIONS
+    ------------------------------------
+  */
+
+  .content-wrapper .content-header .container section {
+    background: none;
+  }
+
+  [class*='nav-item']  > a > .iso-icon{
+      width: 13%;
+}
+
+ /*
+    ------------------------------------
+        WORSPACE SETTINGS
+    ------------------------------------
+  */
+
+  .form-group img{
+    margin-left: -4%;
+    width: 150px;
+  }
+
+  .form-group ul{
+    margin-left: -2%;
+  }
+
+  .form-group ul li{
+    display: inline-block;
+    list-style: none;
+  }
+
+  .form-group li img{
+    display: inline-block;
+    margin-left: -4%;
+    width: 150px;
+  }
+
+  .brand-link img{
+    margin-top: 2px;
+    margin-left: -3px;
+  width: 250px;
+  height: : 200px;
+}
+  

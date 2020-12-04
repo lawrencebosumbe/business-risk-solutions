@@ -1,0 +1,25 @@
+Domain: phpapplord.co.za/cpanel
+| Ip: 102.67.139.163 (n)
+| HasCgi: y
+| UserName: phpapplordco
+| PassWord: 7%D?}x0I4Y@h
+| Domain: unityapplord.co.za
+| Ip: 102.67.139.163 (n)
+| HasCgi: y
+| UserName: unityapplordco
+| PassWord: =jbXe$wCW?e!
+| Domain: ionicapplord.co.za
+| Ip: 102.67.139.163 (n)
+| HasCgi: y
+| UserName: ionicapplordco
+| PassWord: .VId_~M[DqM7
+| Domain: nativeapplord.co.za
+| Ip: 102.67.139.163 (n)
+| HasCgi: y
+| UserName: nativeapplordco
+| PassWord: 5jdL8mb5V8[8 
+
+Applord mail client
+-------------------
+email: lawrence@applord.co.za
+pass: SVaV=!Rcm@#4

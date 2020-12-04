@@ -1,0 +1,513 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+  <title>BRS - ISO Document Modules @yield('title')</title>
+  <!-- Bootstrap 4 -->
+  <link href="{{ asset('bootstrap/dist/css/bootstrap.css') }}" rel="stylesheet">
+  
+  <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+  <link href="{{ asset('css/color-palette.css') }}" rel="stylesheet">
+  <link href="{{ asset('css/iso_management_modules.css') }}" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link href="{{ asset('plugins/fontawesome-free/css/all.min.css') }}" rel="stylesheet">
+
+  <!-- overlayScrollbars -->
+  <link href="{{ asset('plugins/overlayScrollbars/css/OverlayScrollbars.min.css') }}" rel="stylesheet">
+  
+  <!-- Theme style -->
+  <link href="{{ asset('dist/css/adminlte.min.css') }}" rel="stylesheet">
+  
+  <!-- Google Font: Source Sans Pro -->
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+  
+</head>
+<body class="hold-transition sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
+<div class="wrapper">
+  <!-- Navbar -->
+
+
+<nav class="navbar navbar-expand-md navbar-light shadow-sm">
+            <!-- Left navbar links -->
+    <ul class="navbar-nav-1">
+      <li class="nav-item d-none d-sm-inline-block">
+        <a href="#" class="nav-linkbtn btn btn-primary">Dashboard</a>
+      </li>
+      <li class="nav-item d-none d-sm-inline-block">
+        <a href="iso_management_modules" class="nav-linkbtn btn btn-primary">RSS Feeds</a>
+      </li>
+      <li class="nav-item d-none d-sm-inline-block">
+        <a href="#" class="nav-linkbtn btn btn-primary">Calendar</a>
+      </li>
+      <li class="nav-item d-none d-sm-inline-block">
+        <a href="#" class="nav-linkbtn btn btn-primary">Settings</a>
+      </li>
+    </ul>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <!-- Left Side Of Navbar -->
+                    <ul class="navbar-nav mr-auto">
+
+                    </ul>
+
+                    <!-- Right Side Of Navbar -->
+                    <ul class="navbar-nav ml-auto">
+                        <!-- Authentication Links -->
+                        @guest
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                            </li>
+                            @if (Route::has('register'))
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                </li>
+                            @endif
+                        @else
+                            <li class="nav-item dropdown user-img">
+                                <img src="{{ Auth::user()->profile_image }}">
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle user-auth" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                    {{ Auth::user()->first_name . ' ' . Auth::user()->last_name}} <span class="caret"></span>
+                                </a>
+
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="{{ route('profile') }}">Profile</a>
+                                    <a class="dropdown-item" href="{{ route('profile') }}">Settings</a>
+                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
+                                    </a>
+
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                        @csrf
+                                    </form>                                    
+                                </div>
+                            </li>
+                        @endguest
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+  <!-- Main Sidebar Container -->
+  <aside class="main-sidebar sidebar-light-primary elevation-4">
+    <!-- Brand Logo -->
+    <a href="" class="brand-link">
+      <img src="{{ asset('images/brs_logo.png') }} " alt="BRS" class="brand-image brs-img elevation-3"
+           style="opacity: .9">
+    </a>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+
+      <!-- Sidebar Menu -->
+      <nav class="mt-2">
+        <ul class="nav nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+          <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
+          <li class="nav-item has-treeview my-organization">
+            <a href="#" class="nav-link active">
+              <i class="nav-icon far fa-building"></i>
+              <p>
+                My Organization
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="" class="nav-link">
+                  <i class="fas fa-tachometer-alt nav-icon"></i>
+                  <p>Dashboard</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link">
+                  <i class="fas fa-book nav-icon"></i>
+                  <p>Policies & Procedures</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link">
+                  <i class="fas fa-file-alt nav-icon"></i>
+                  <p>Health & Safety</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link active">
+              <img src="{{ asset('images/iso-icon.png') }}" class="iso-icon" alt="BRS" />
+              <p>
+                ISO Management
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Health & Safety</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link">
+                  <i class="fas fa-paste nav-icon"></i>
+                  <p>Quality Management</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link">
+                  <i class="fas fa-file-alt nav-icon"></i>
+                  <p>Environmental Man.</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link">
+                  <i class="fas fa-file-alt nav-icon"></i>
+                  <p>Deviation Nonconform.</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link">
+                  <i class="fas fa-file-alt nav-icon"></i>
+                  <p>CAPA</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link">
+                  <i class="fas fa-file-alt nav-icon"></i>
+                  <p>Change Control</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/layout/collapsed-sidebar.html" class="nav-link">
+                  <i class="fas fa-file-alt nav-icon"></i>
+                  <p>Document Control</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link active">
+              <i class="nav-icon fas fa-paperclip"></i>
+              <p>
+                My Works
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="" class="nav-link">
+                  <i class="fas fa-comments nav-icon"></i>
+                  <p>My Discussions</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link">
+                  <i class="fas fa-paste nav-icon"></i>
+                  <p>My Tasks</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link">
+                  <i class="fas fa-file-alt nav-icon"></i>
+                  <p>My Files</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link active">
+              <i class="nav-icon fas fa-balance-scale"></i>
+              <p>
+                Compliances
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="" class="nav-link">
+                  <i class="fas fa-book nav-icon"></i>
+                  <p>Security Incidents</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link">
+                  <i class="fas fa-book nav-icon"></i>
+                  <p>Environmental Incidents</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link">
+                  <i class="fas fa-book nav-icon"></i>
+                  <p>Customer Complaints</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link">
+                  <i class="fas fa-book nav-icon"></i>
+                  <p>Nonconformities</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link">
+                  <i class="fas fa-book nav-icon"></i>
+                  <p>Corrective Actions</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link">
+                  <i class="fas fa-book nav-icon"></i>
+                  <p>Internal Audits</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link">
+                  <i class="fas fa-book nav-icon"></i>
+                  <p>Project Detail</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link">
+                  <i class="fas fa-book nav-icon"></i>
+                  <p>Security Controls</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <!-- /.sidebar-menu -->
+    </div>
+    <!-- /.sidebar -->
+  </aside>
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+      <div class="container-fluid">
+     	 <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1 class="m-0 text-dark">Document Management System</h1>
+          </div><!-- /.col -->
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item active">Document Management System</li>
+            </ol>
+          </div><!-- /.col -->
+        </div><!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
+
+    <!-- Main content -->
+ 	<section class="content">
+      <div class="container">
+        <!-- Info boxes -->
+        
+        <!-- Small boxes (Stat box) -->
+        <div class="row">
+          <div class="col-md-4 col-sm-4 col-xs-12">
+              
+            <!-- small box -->
+            <!--<a href="health_safety_management">-->
+
+            <a href="">
+                <div class="small-box iso-doc-process">
+              <div class="inner">
+                <h3>Health & Safety Management</h3>
+                    <div class="iso-logo">
+                        <img src="{{ asset('images/iso-icon.png') }}" alt="BRS">
+                    </div>
+              </div>
+              <div class="icon">
+                <i class="ion ion-bag"></i>
+              </div>
+              <div class="small-box-footer">ISO 45001 </div>
+            </div>
+            </a>
+            
+          </div>
+          <!-- ./col -->
+          <div class="col-md-4 col-sm-4 col-xs-12">
+              
+            <!-- small box -->
+            <a href="">
+                <div class="small-box iso-doc-process">
+              <div class="inner">
+                <h3>Quality Management</h3>
+                    <div class="iso-logo">
+                        <img src="{{ asset('images/iso-icon.png') }}" alt="BRS">
+                    </div>
+              </div>
+              <div class="icon">
+                <i class="ion ion-stats-bars"></i>
+              </div>
+              <div class="small-box-footer">ISO 9001</div>
+            </div>
+            </a>
+            
+          </div>
+          <!-- ./col -->
+          <div class="col-md-4 col-sm-4 col-xs-12">
+              
+            <!-- small box -->
+            <a href="">
+                <div class="small-box iso-doc-process">
+              <div class="inner">
+                <h3>Environmental Management</h3>
+                    <div class="iso-logo">
+                        <img src="{{ asset('images/iso-icon.png') }}" alt="BRS">
+                    </div>
+              </div>
+              <div class="icon">
+                <i class="ion ion-person-add"></i>
+              </div>
+              <div class="small-box-footer">ISO 14001 </div>
+            </div>
+            </a>
+            
+          </div>
+        </div>
+        <!-- /.row -->
+        
+        <!-- Small boxes (Stat box) -->
+        <div class="row">
+          <div class="col-md-4 col-sm-4 col-xs-12">
+              
+            <!-- small box -->
+            <a href="">
+                <div class="small-box iso-doc-process">
+              <div class="inner">
+                <h3>Deviation | Non Conformance</h3>
+                    <div class="iso-logo">
+                        <img src="{{ asset('images/iso-icon.png') }}" alt="BRS">
+                    </div>
+              </div>
+              <div class="icon">
+                <i class="ion ion-bag"></i>
+              </div>
+              <div class="small-box-footer"></div>
+            </div>
+            </a>
+            
+          </div>
+          <!-- ./col -->
+          <div class="col-md-4 col-sm-4 col-xs-12">
+              
+            <!-- small box -->
+            <a href="">
+                <div class="small-box iso-doc-process">
+              <div class="inner">
+                <h3>CAPA</h3>
+                    <div class="iso-logo">
+                        <img src="{{ asset('images/iso-icon.png') }}" alt="BRS">
+                    </div>
+              </div>
+              <div class="icon">
+                <i class="ion ion-stats-bars"></i>
+              </div>
+              <div class="small-box-footer"></div>
+            </div>
+            </a>
+          </div>
+          <!-- ./col -->
+          <div class="col-md-4 col-sm-4 col-xs-12">
+              
+            <!-- small box -->
+            <a href="">
+                <div class="small-box iso-doc-process">
+              <div class="inner">
+                <h3>Change Control</h3>
+                    <div class="iso-logo">
+                        <img src="{{ asset('images/iso-icon.png') }}" alt="BRS">
+                    </div>
+              </div>
+              <div class="icon">
+                <i class="ion ion-person-add"></i>
+              </div>
+              <div class="small-box-footer"></div>
+            </div>
+            </a>
+          </div>
+        </div>
+        <!-- /.row -->
+        
+        <!-- Small boxes (Stat box) -->
+        <div class="row">
+          <div class="col-md-12 col-sm-12 col-xs-12">
+              
+            <!-- small box -->
+            <a href="document_control">
+                <div class="small-box iso-doc-process">
+              <div class="inner">
+                <h3>Document Control</h3>
+                    <div class="">
+                        <img src="{{ asset('images/iso-icon.png') }}" alt="BRS">
+                    </div>
+              </div>
+              <div class="icon">
+                <i class="ion ion-bag"></i>
+              </div>
+              <div class="small-box-footer"></div>
+            </div>
+            </a>
+          </div>
+        </div>
+        <!-- /.row -->
+
+      </div><!--/. container-fluid -->
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+  </aside>
+  <!-- /.control-sidebar -->
+  
+  <!-- Main Footer -->
+  <footer class="main-footer">
+    <strong>&copy; <?php echo date('Y'); ?> <a href="https://www.brsriskgroup.com">Business Risk Solutions Operation (Pty) Ltd | (BRS)</a>.</strong>
+    All rights reserved.
+    <div class="float-right d-none d-sm-inline-block">
+      <b>Version</b> 2.1.0
+    </div>
+  </footer>
+</div>
+<!-- ./wrapper -->
+  
+<!-- REQUIRED SCRIPTS -->
+<!-- jQuery -->
+<script src="plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap -->
+<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- overlayScrollbars -->
+<script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+<!-- AdminLTE App -->
+<script src="dist/js/adminlte.js"></script>
+
+<!-- OPTIONAL SCRIPTS -->
+<script src="dist/js/demo.js"></script>
+
+<!-- PAGE PLUGINS -->
+<!-- jQuery Mapael -->
+<script src="plugins/jquery-mousewheel/jquery.mousewheel.js"></script>
+<script src="plugins/raphael/raphael.min.js"></script>
+<script src="plugins/jquery-mapael/jquery.mapael.min.js"></script>
+<script src="plugins/jquery-mapael/maps/world_countries.min.js"></script>
+<!-- ChartJS -->
+<script src="plugins/chart.js/Chart.min.js"></script>
+
+<!-- PAGE SCRIPTS -->
+<script src="dist/js/pages/dashboard2.js"></script>
+</body>
+</html>

@@ -1,0 +1,186 @@
+/*
+-----------------------------------------
+    MAIN STYLES
+-----------------------------------------
+*/
+
+.main-sidebar{
+  margin-top: 0;
+}
+
+.siderbar nav{
+  height: 100%;
+}
+
+.navbar-bg-dark {
+  background: #364B56 !important;
+}
+.navbar-bg-silver {
+  background: #d2d6de !important;
+  border-bottom: 3px solid #556B78 !important;
+}
+
+.sidebar-light-primary .nav-item a {
+  background: #567E95 !important;
+}
+
+.sidebar-light-primary .nav-treeview a {
+  background: #fff !important;
+}
+
+
+.brand-link{
+  height: 100px;
+}
+	
+.brs-img{
+  position: relative;
+  top: -15px;
+  left: -13px;
+  min-width: 100%;
+  min-height: 100px;
+}
+
+.my-organization{
+	margin-top: 45px;
+}
+
+[class*='nav-item']  > a > .iso-icon{
+      width: 13%;
+} 
+
+.navbar .navbar-nav-1{
+  margin-left: 25%;
+  margin-bottom: 15px;
+  display: inline-block;
+}
+
+/*
+---------------------------------------
+  MAIN STYLES
+---------------------------------------
+*/
+
+.btn {
+    margin-top: 15px;
+    padding: 0.475rem 0.75rem;
+  }
+  
+    .btn-primary {
+    color: #fff;
+    background-color: #364B56;
+    border-color: #556B78;
+  }
+  
+  .btn-primary:hover {
+    color: #fff;
+    background-color: #556B78;
+    border-color: #556B78;
+  }
+  
+  .document-top-cards{
+        color: #000;
+        text-decoration: none;
+    }
+      
+    .document-top-cards:hover{
+        color: #000;
+        text-decoration: none;
+    }
+    
+    .document-top-cards .info-box{
+        color: #fff;
+        background: #556B78;
+    }
+    
+  .small-box{
+        margin-top: 24px !important;
+     }
+   
+    .small-box h3{
+        font-size: 24px !important;
+        color: #fff;
+     }
+     
+     .small-box span{
+        font-size: 42px;
+        color: #fff;
+        margin-left: 35%;
+     } 
+     
+     .small-box .small-box-footer{
+        color: #fff !important;     
+     }
+   
+   .content-header{
+        margin-top: 75px;
+    }
+    
+    .iso-doc-process{
+        background: #567E95;
+        min-height: 275px;
+        bottom: 0;
+    }
+    
+    .iso-doc-process .small-box-footer{
+          width: 100%;
+          position: absolute;
+          bottom: 0;
+    }
+    
+    [class*="col-md-4"] a, [class*="col-md-12"] a{
+        color: #fff;  
+    }
+    
+    [class*="col-md-4"] h3, [class*="col-md-12"] h3{
+        text-align: center;
+        font-size: 24px;  
+    }
+    
+    [class*="col-md-4"] img, [class*="col-md-12"] img{
+        width: 175px;
+        margin-left: 25%;
+    }
+    
+    [class*="col-md-12"] img{
+        margin-left: 42%;
+    }
+
+/*
+-----------------------------------------------------------
+  NAVBAR
+-----------------------------------------------------------
+*/
+
+.navbar{
+  position: fixed;
+  max-height: 65px;
+  width: 100%;
+  background: #556B78 !important; 
+  z-index: 1;
+}
+
+.navbar-brand img{
+  max-width: 125px;
+}
+
+.user-auth {
+    position: relative;
+    color: #fff !important; 
+    left: -5%;
+    top: -25px;
+}
+
+.user-img img{
+  position: relative;
+  top: 20px;
+  left: -25%;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.dropdown-menu-right{
+  top: 65px;
+  left: 25%;
+}

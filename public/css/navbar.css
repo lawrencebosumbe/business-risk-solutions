@@ -1,0 +1,31 @@
+.navbar{
+  position: fixed;
+  max-height: 65px;
+  width: 100%;
+  background: #556B78 !important; 
+  z-index: 9999;
+}
+
+.navbar-brand img{
+  max-width: 125px;
+}
+
+.user-auth {
+    position: relative;
+    color: #fff !important; 
+    left: 25%;
+    top: -25px;
+}
+
+.user-img img{
+  position: relative;
+  top: 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.dropdown-menu-right{
+  top: 65px;
+  left: 25%;
+}
